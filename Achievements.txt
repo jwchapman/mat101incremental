@@ -1,0 +1,77 @@
+Gain 1 K cumulative knowledge.
+Gain 1 M cumulative knowledge.
+Gain 1 B cumulative knowledge.
+Gain 1 T cumulative knowledge.
+Gain 1 Qa cumulative knowledge.
+Gain 1 Qt cumulative knowledge.
+Gain 1 Sx cumulative knowledge.
+Gain 1 Sp cumulative knowledge.
+Gain 1 Oc cumulative knowledge.
+Gain 1 Nn cumulative knowledge.
+Gain 1 Dc cumulative knowledge.
+Gain 1 UDc cumulative knowledge.
+Gain 1 DDc cumulative knowledge.
+Gain 1 TDc cumulative knowledge.
+Gain 1 QaDc cumulative knowledge.
+Gain 1 QnDc cumulative knowledge.
+Gain 1 SxDc cumulative knowledge.
+Gain 1 SpDc cumulative knowledge.
+Gain 1 OcDc cumulative knowledge.
+Gain 1 NvDc cumulative knowledge.
+Gain 1 Vi cumulative knowledge.
+Unlock Unit 1
+Unlock Unit 2
+Unlock Unit 3
+Unlock Unit 4
+Unlock Unit 5
+Unlock Unit 6
+Unlock Unit 7
+Unlock Unit 8
+Unlock Unit 9
+Unlock Unit 10
+Unlock Unit 11
+Unlock Unit 12
+Unlock Unit 13
+1 Question Correct
+10 Questions Correct
+25 Questions Correct
+50 Questions Correct
+100 Questions Correct
+250 Questions Correct
+500 Questions Correct
+1000 Questions Correct
+2500 Questions Correct
+5000 Questions Correct
+10000 Questions Correct
+Collect 1 Greek letter
+Collect 5 unique Greek letters
+Collect 15 unique Greek letters
+Collect 24 unique Greek letters
+Collect 1 ruby
+Collect 10 rubies
+Collect 25 rubies
+Collect 50 rubies
+Collect 100 rubies
+Collect 250 rubies
+Collect 500 rubies
+Streak 10
+Streak 50
+Streak 100
+Streak 250
+Music Copper Level
+Music Silver Level
+Music Gold Level
+Music Platinum Level
+Music Diamond Level
+Type-1 Copper Level
+Type-1 Silver Level
+Type-1 Gold Level
+Type-1 Platinum Level
+Type-1 Diamond Level
+^^ 77(5) = 385 achievements
+
+
+
+
+
+
