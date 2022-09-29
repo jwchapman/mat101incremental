@@ -1605,7 +1605,7 @@ function buyQuestion(i) {
       answerString = 2
     }
     else if (i == 22) { //Factor w^2 - a^2
-      var a = 1 + Math.ceil(Math.random() * 9)
+      var a = 1 + Math.ceil(Math.random() * 14)
       var asq = a ** 2
       document.getElementById("mathProblem").innerHTML = "Completely factor the expression<br>`w^2-" + asq + "`."
       answer = ["(w-" + a + ")(w+" + a + ")" , "(w+" + a + ")(w-" + a + ")"]
@@ -1626,7 +1626,7 @@ function buyQuestion(i) {
       if (a == 0) {a += 5} //If a=0, make it a=5.
       var b = Math.ceil(Math.random() * 21) - 11 //This can be from -10 to 10
       if (b == 0) {b -= 7} //If b=0, make it b=-7.
-      else if (b == a || b == -a) {b *= 2} //If b=a or b=-a, double b. This can't make b zero again.
+      if (b == a || b == -a) {b *= 2} //If b=a or b=-a, double b. This can't make b zero again.
       var c = a + b
       var d = a * b
       var x1 = - a
@@ -1638,19 +1638,18 @@ function buyQuestion(i) {
       answerString = 2
     }
     else if (i == 25) { //Solve ax^2 + bx + c = 0
-      var a = 1 + Math.ceil(Math.random() * 2) //This can be 2 or 3
+      var a = 2 * Math.ceil(Math.random() * 2) //This can be 2 or 4
       var b = 2 * Math.ceil(Math.random() * 6) - 7 //This can be -5,-3,-1,1,3,5
-      if (b == 3) {b += 2} //If b=3, add 2 to it. I don't want it to have a common factor with a.
-      else if (b == -3) {b += 2} //Same as above
       var c = Math.ceil(Math.random() * 13) - 7 //This can be from -6 to 6
       if (c == 0) {c += 2} //If c=0, add 2.
       var d = a * c + b
       var e = - b*c
+      var nb = - b
       var x1 = - b / a
       var x2 = - c
       text = "Solve the equation:<br>" + "`" + a + "x^2+" + d + "x=" + e + "`<br>"
       document.getElementById("mathProblem").innerHTML = text.replace("+-","-").replace("+1x","+x").replace("-1x","-x")
-      answer = [x1 + "," + x2 , x2 + "," + x1]
+      answer = [x1 + "," + x2 , x2 + "," + x1 , nb + "/" + a + "," + x2 , x2 + "," + nb + "/" + a]
       answerString = 2
     }
     else if (i == 26) { //Find width of rectangle given area and relationship between L and W
