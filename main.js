@@ -2396,7 +2396,7 @@ function buyQuestion(i) {
     }
     else if (i == 58) { //Determine function formula after translation
       var a = 2 * Math.ceil(Math.random() * 2) - 3
-      var h = Math.ceil(Math.random() * 11) - 6
+      var h = (2 * Math.ceil(Math.random() * 2) - 3) * Math.ceil(Math.random() * 5)
       var k = a * (Math.ceil(Math.random() * 7) - 6)
       g = function(x) {return a * (x - h) ** 2 + k}
       var text = "Write the equation of the following transformation of `y=x^2`:<br>"
@@ -2404,7 +2404,12 @@ function buyQuestion(i) {
         + "<br>For example, for `y=-(x-1)^2-1`, type y=-(x-1)^2-1 (no spaces!)."
       document.getElementById("mathProblem").innerHTML = text
       plot(g)
-      var answertext = "y=" + a + "(x-" + h + ")^2+" + k
+      if (k == 0) {
+        var answertext = "y=" + a + "(x-" + h + ")^2"
+      }
+      else {
+        var answertext = "y=" + a + "(x-" + h + ")^2+" + k
+      }
       answer = answertext.replace("1(","(").replace("--","+").replace("+-","-")
       answerString = 1
     }
