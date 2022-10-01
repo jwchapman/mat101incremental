@@ -162,9 +162,9 @@ var upgradePurchased = [ [false, false, false, false, false, false],
                           [false, false, false, false, false, false],
                           [false, false, false, false, false, false],
                           [false, false, false, false, false, false] ]
-var KNeededToUnlock =  [[0,0], [10,0], [240,2], [32,4], [3.2,6], [320,7], [110,8], [1.9,10], [220,11], [1.2,14],
+var KNeededToUnlock =  [[0,0], [10,0], [240,2], [32,4], [3.2,6], [320,7], [110,8], [1.9,10], [220,11], [420,13],
                         [160,15], [2.4,17], [2.2,19], [5.6,20]]
-var KPSNeededToUnlock = [[0,0], [1,0], [50,1], [6,3], [700,4], [80,6], [28,7], [480,8], [56,10], [320,12],
+var KPSNeededToUnlock = [[0,0], [1,0], [50,1], [6,3], [700,4], [80,6], [28,7], [480,8], [56,10], [50,12],
                          [36,14], [700,15], [520,17], [1.2,19]]
 var correctNeededtoUnlock = [0, 0, 80, 60, 60, 60, 30, 50, 60, 80, 60, 50, 70, 40]
                           //Cost of nth   x20   x15   x200  x2
@@ -3456,9 +3456,9 @@ for (let i = 1; i < 6; i++) { //Add Music Buttons
   addMusicButton[i].classList.add("buyButton")
   addMusicButton[i].classList.add(iconmusic[i])
   addMusicButton[i].innerHTML =
-    "<b>Buy Music<br><br><br>Cost: " + convertNumber(musicUpgradeCost[i]) + "</b>"
+    "<b>Buy Music<br><br><br>" + convertNumber(musicUpgradeCost[i]) + "</b>"
   addMusicButton[i].style =
-    "background-color: white; margin: 0.26vw; font-size: 0.6vw; line-height:1vw"
+    "background-color: white; font-size: 0.7vw; line-height:1.07vw"
   addMusicButton[i].addEventListener('click', function() {
     purchaseUpgradeAddMusic(i);
     addMusicButton[i].style.display = "none";
@@ -3762,10 +3762,10 @@ var upgradeButton = [
 ]
 for (let i = 1; i < 78; i++) {
   for (let j = 2; j < 6; j++) {
-    upgradeButton[i][j].innerHTML = "<b>Lvl Up T-" + i + "<br><br><br>Cost: "
+    upgradeButton[i][j].innerHTML = "<b>Lvl Up T-" + i + "<br><br><br>"
       + upgradeCost[i][j][0] + " " + abbr[upgradeCost[i][j][1]] + "</b>"
     upgradeButton[i][j].style =
-      "background-color: white; font-size: 0.6vw; line-height:1vw"
+      "background-color: white; font-size: 0.7vw; line-height:1.07vw"
     upgradeButton[i][j].classList.add("buyButton")
     upgradeButton[i][j].addEventListener('click', function() {
       levelUpT(i);
