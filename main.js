@@ -2478,7 +2478,7 @@ function buyQuestion(i) {
     else if (i == 61) { //Evaluate sum/diff/prod/quot of functions at a point
       var a = (2 * Math.ceil(Math.random() * 2) - 3) * (1 + Math.ceil(Math.random() * 5))
       var b = (2 * Math.ceil(Math.random() * 2) - 3) * (1 + Math.ceil(Math.random() * 4))
-      var c = (2 * Math.ceil(Math.random() * 2) - 3) * (1 + Math.ceil(Math.random() * 4))
+      var c = (2 * Math.ceil(Math.random() * 2) - 3) * (2 + Math.ceil(Math.random() * 4))
       var x = (2 * Math.ceil(Math.random() * 2) - 3) * Math.ceil(Math.random() * 2)
       var fx = x ** 2 + a * x + b
       var gx = x + c
