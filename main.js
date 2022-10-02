@@ -2515,15 +2515,31 @@ function buyQuestion(i) {
         var apc = a + c
         var bpd = b + d
         var eqn = "`(f+g)(x)`"
-        var answertext = apc + "x+" + bpd
-        answer = answertext.replace("+-","-").replace("+0","").replace("1x","x").replace("0x+","").replace("0x","")
+        if (apc == 1) {
+          var answertext = "x+" + bpd
+        }
+        else if (apc == 0) {
+          var answertext = bpd
+        }
+        else {
+          var answertext = apc + "x+" + bpd
+        }
+        answer = answertext.replace("+-","-").replace("+0","").replace("-1x","-x")
       }
       else {
         var amc = a - c
         var bmd = b - d
         var eqn = "`(f-g)(x)`"
-        var answertext = amc + "x+" + bmd
-        answer = answertext.replace("+-","-").replace("+0","").replace("1x","x").replace("0x+","").replace("0x","")
+        if (amc == 1) {
+          var answertext = "x+" + bmd
+        }
+        else if (amc == 0) {
+          var answertext = bmd
+        }
+        else {
+          var answertext = amc + "x+" + bmd
+        }
+        answer = answertext.replace("+-","-").replace("+0","").replace("-1x","-x")
       }
       var text = "Find " + eqn + ", given the functions<br>"
         + "`f(x)=" + a + "x+" + b + "`<br>"
