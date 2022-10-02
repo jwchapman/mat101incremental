@@ -2567,12 +2567,12 @@ function buyQuestion(i) {
       if (type == 1) {
         var m = a * c
         var n = a * d + b
-        var eqn = "`(f`" + " o " + "`g)(x)`"
+        var eqn = "`(f`" + " &#8728; " + "`g)(x)`"
       }
       else {
         var m = a * c
         var n = b * c + d
-        var eqn = "`(g`" + " o " + "`f)(x)`"
+        var eqn = "`(g`" + " &#8728; " + "`f)(x)`"
       }
       var answertext = m + "x+" + n
       answer = answertext.replace("+-","-").replace("+0","")
@@ -2593,11 +2593,11 @@ function buyQuestion(i) {
       var gofx = fx + c
       var type = Math.ceil(Math.random() * 2)
       if (type == 1) { // (f o g)(x)
-        var eqn = "`(f`" + " o " + "`g)(" + x + ")`"
+        var eqn = "`(f`" + " &#8728; " + "`g)(" + x + ")`"
         answer = fogx
       }
       else { // (g o f)(x)
-        var eqn = "`(g`" + " o " + "`f)(" + x + ")`"
+        var eqn = "`(g`" + " &#8728; " + "`f)(" + x + ")`"
         answer = gofx
       }
       var text = "Find " + eqn + ", given the functions<br>"
