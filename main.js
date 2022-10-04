@@ -83,6 +83,7 @@ var addMusicButton = [0,document.createElement("button"),document.createElement(
 const iconmusic = ["","iconmusiccopper","iconmusicsilver","iconmusicgold","iconmusicplatinum","iconmusicdiamond"]
 var rewardFactor =        [ [0,0], [0,0], [2,0], [5,0], [10,0], [1,1] ]
                           //Upgrade to:   silv   gold   plat    diamond
+var diamondFactor = 1.2
 var upgradeArea = document.getElementById("upgradeArea")
 var upgradePurchased = [ [false, false, false, false, false, false],
                           [false, false, false, false, false, false],
@@ -272,7 +273,7 @@ let greekKnowledge = new Audio('greekknowledge.mp3')
 let greekRuby = new Audio('greekruby.mp3')
 var slider = document.getElementById("soundVolume")
 slider.oninput = function() {
-  achievementSound.volume = 0.4 * this.value / 100
+  achievementSound.volume = 0.3 * this.value / 100
   unlockSound.volume = this.value / 100
   wrongAnswer.volume = this.value / 100
   greekRuby.volume = this.value / 100
@@ -3533,7 +3534,7 @@ function levelUpT(i) {
     document.getElementById("kps").innerHTML = "per second: " + convertNumber(gameData.kps) + " KPS"
     kpsFromT[i] = multiply(kpsFromT[i],rewardFactor[levelT[i]]) 
     document.getElementById("kpsFromT" + i).innerHTML = convertNumber(kpsFromT[i]) + " KPS"
-    for (let j=1; j < numberOfQ + 1; j++) {
+    for (let j = 1; j < numberOfQ + 1; j++) {
       c = divide(kpsFromT[j],gameData.kps)
       document.getElementById("kpsPctFromT" + j).innerHTML =
         Math.round(c[0] * 10 ** (3 * c[1]) *10000)/100 + "%"
@@ -3551,7 +3552,7 @@ function levelUpT(i) {
     document.getElementById("kps").innerHTML = "per second: " + convertNumber(gameData.kps) + " KPS"
     kpsFromT[i] = multiply(kpsFromT[i],rewardFactor[levelT[i]]) 
     document.getElementById("kpsFromT" + i).innerHTML = convertNumber(kpsFromT[i]) + " KPS"
-    for (let j=1; j < numberOfQ + 1; j++) {
+    for (let j = 1; j < numberOfQ + 1; j++) {
       c = divide(kpsFromT[j],gameData.kps)
       document.getElementById("kpsPctFromT" + j).innerHTML =
         Math.round(c[0] * 10 ** (3 * c[1]) *10000)/100 + "%"
@@ -3566,15 +3567,25 @@ function levelUpT(i) {
     kpsvector[i] = multiply(kpsvector[i],rewardFactor[levelT[i]])
     document.getElementById("kpsT" + i).innerHTML = "+" + convertNumber(kpsvector[i]) + " KPS"
     gameData.kps = add(multiply(kpsFromT[i],subtract(rewardFactor[levelT[i]],[1,0])),gameData.kps)
-    document.getElementById("kps").innerHTML = "per second: " + convertNumber(gameData.kps) + " KPS"
+    //document.getElementById("kps").innerHTML = "per second: " + convertNumber(gameData.kps) + " KPS"
     kpsFromT[i] = multiply(kpsFromT[i],rewardFactor[levelT[i]]) 
     document.getElementById("kpsFromT" + i).innerHTML = convertNumber(kpsFromT[i]) + " KPS"
-    for (let j=1; j < numberOfQ + 1; j++) {
+    for (let j = 1; j < numberOfQ + 1; j++) {
       c = divide(kpsFromT[j],gameData.kps)
       document.getElementById("kpsPctFromT" + j).innerHTML =
         Math.round(c[0] * 10 ** (3 * c[1]) *10000)/100 + "%"
     }
     upgradePurchased[i][5] = true
+
+    gameData.kps = multiply(gameData.kps,[diamondFactor,0]);
+    document.getElementById("kps").innerHTML = "per second: " + convertNumber(gameData.kps) + " KPS"
+    for (let i = 1; i < 78; i++) {
+      kpsvector[i] = multiply(kpsvector[i],[diamondFactor,0])
+      document.getElementById("kpsT"+i).innerHTML = "+" + convertNumber(kpsvector[i]) + " KPS"
+      kpsFromT[i] = multiply([numberCorrect[i],0],kpsvector[i])
+      document.getElementById("kpsFromT"+i).innerHTML = convertNumber(kpsFromT[i]) + " KPS"
+    }
+
     gameData.rubyCost = multiply(gameData.kps,[7.2,1]) //This is 2 hours of KPS
     document.getElementById("rubyCost").innerHTML = convertNumber(gameData.rubyCost)
   }
