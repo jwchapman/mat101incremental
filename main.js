@@ -83,7 +83,7 @@ var addMusicButton = [0,document.createElement("button"),document.createElement(
 const iconmusic = ["","iconmusiccopper","iconmusicsilver","iconmusicgold","iconmusicplatinum","iconmusicdiamond"]
 var rewardFactor =        [ [0,0], [0,0], [2,0], [5,0], [10,0], [1,1] ]
                           //Upgrade to:   silv   gold   plat    diamond
-var diamondFactor = 1.2
+var diamondFactor = 1.07
 var upgradeArea = document.getElementById("upgradeArea")
 var upgradePurchased = [ [false, false, false, false, false, false],
                           [false, false, false, false, false, false],
