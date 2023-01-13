@@ -163,11 +163,11 @@ var upgradePurchased = [ [false, false, false, false, false, false],
                           [false, false, false, false, false, false],
                           [false, false, false, false, false, false],
                           [false, false, false, false, false, false] ]
-var KNeededToUnlock =  [[0,0], [10,0], [240,2], [32,4], [3.2,6], [320,7], [110,8], [1.9,10], [220,11], [420,13],
-                        [240,15], [2.4,17], [2.2,19], [5.6,20]]
-var KPSNeededToUnlock = [[0,0], [1,0], [50,1], [6,3], [700,4], [80,6], [28,7], [480,8], [56,10], [50,12],
-                         [42,14], [700,15], [250,17], [4,19]]
-var correctNeededtoUnlock = [0, 0, 80, 60, 60, 60, 30, 50, 60, 80, 60, 50, 70, 40]
+var KNeededToUnlock =  [[0,0], [5,0], [120,2], [16,4], [1.6,6], [160,7], [55,8], [1,10], [110,11], [210,13],
+                        [120,15], [1.2,17], [1.1,19], [2.8,20]]
+var KPSNeededToUnlock = [[0,0], [1,0], [25,1], [3,3], [350,4], [40,6], [14,7], [240,8], [28,10], [25,12],
+                         [21,14], [350,15], [125,17], [2,19]]
+var correctNeededtoUnlock = [0, 0, 40, 30, 30, 30, 15, 25, 30, 40, 30, 25, 35, 20]
                           //Cost of nth   x20   x15   x200  x2
 var upgradeCost =         [ [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]] ,
 
